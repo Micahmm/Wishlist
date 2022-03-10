@@ -20,12 +20,10 @@ class WishList:
         self.__list_id = WishList.__list_id
         WishList.__list_id += 1
         WishList.__total_list.append(self)
-    ##Helped by Siddharth Patwardhan in office hours
     ##method to add gift
     def addGift(self,gift):
         if isinstance(gift,Gift) and gift not in self.__gift_list and not self.__delivery:
             self.__gift_list.append(gift)
-    ##Helped by Manita Pote in office hours
     ##method to remove gift
     def removeGift(self,gift):
         if gift in self.__gift_list:
@@ -34,7 +32,6 @@ class WishList:
     def purchase(self):
         if not self.__delivery:
             self.delivery = True
-    ##Helped by Manita Pote in office hours
     ##method to display the wishlist
     def display_list(self):
         table = {}
@@ -44,7 +41,6 @@ class WishList:
         table_print(["Gift", "Price"], list(table.items()), 20)
 
     
-    ##Helped by Hannah Hasenwinkel in office hours
     ##method to display the most popular gift
     @staticmethod
     def popular():
@@ -59,7 +55,6 @@ class WishList:
                 max_num = gift_count
                 pop_gift = gift
         print("Most popular gift:",gift,",with a quantity of",max_num)
-    ##Helped by Will Bankston in office hours
     ##method to display all gifts within a specified state
     @staticmethod
     def state(state):
